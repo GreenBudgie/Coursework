@@ -51,11 +51,21 @@ header {
                 list-style: none;
                 font-family: 'Diamond Girl';
                 font-size: 30px;
-                color: $primary-color;
 
                 li {
                     margin: 0 26px;
                 }
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
             }
 
         }

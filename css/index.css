@@ -78,11 +78,21 @@ header nav #navbar ul {
   list-style: none;
   font-family: 'Diamond Girl';
   font-size: 30px;
-  color: white;
 }
 
 header nav #navbar ul li {
   margin: 0 26px;
+}
+
+header nav #navbar a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+header nav #navbar a:hover {
+  color: #E59656;
 }
 
 header nav #cart {
