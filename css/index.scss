@@ -4,9 +4,42 @@
     box-sizing: border-box;
 }
 
+@import 'presets';
+
 header {
+    position: absolute;
+    width: 100%;
     height: 1057px;
+    background-position: center;
     background-image: linear-gradient(360deg, #000000 3.04%, rgba(0, 0, 0, 0) 77.09%), 
                         linear-gradient(180deg, #000000 -1.77%, rgba(0, 0, 0, 0) 60.34%), 
                         url("../img/index/top-background.jpg");
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 13px;
+
+        #logo {
+            display: flex;
+
+            span {
+
+                margin: 0px 17px;
+                
+                #logo-text {
+                    font-family: 'Tomatoes';
+                    font-size: 48px;
+                    color: $primary-color;
+                }
+
+                #bottom-text {
+                    font-family: 'Diamond Girl';
+                    font-size: 36px;
+                    color: $secondary-color;
+                    transform: translateY(-35px)
+                }
+            }
+        }
+    }
 }
