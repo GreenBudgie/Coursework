@@ -24,7 +24,6 @@ header {
             display: flex;
 
             span {
-
                 margin: 0px 17px;
                 
                 #logo-text {
@@ -40,6 +39,29 @@ header {
                     transform: translateY(-35px)
                 }
             }
+        }
+
+        #navbar {
+            margin: auto 0;
+            padding: 0 120px;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                font-family: 'Diamond Girl';
+                font-size: 30px;
+                color: $primary-color;
+
+                li {
+                    margin: 0 26px;
+                }
+            }
+
+        }
+
+        #cart {
+            margin: auto 0;
         }
     }
 }

@@ -62,4 +62,30 @@ header nav #logo span #bottom-text {
   -webkit-transform: translateY(-35px);
           transform: translateY(-35px);
 }
+
+header nav #navbar {
+  margin: auto 0;
+  padding: 0 120px;
+}
+
+header nav #navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  font-family: 'Diamond Girl';
+  font-size: 30px;
+  color: white;
+}
+
+header nav #navbar ul li {
+  margin: 0 26px;
+}
+
+header nav #cart {
+  margin: auto 0;
+}
 /*# sourceMappingURL=index.css.map */
