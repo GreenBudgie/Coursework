@@ -21,12 +21,11 @@
 }
 
 header {
-  position: absolute;
   width: 100%;
-  height: 1057px;
+  height: 950px;
   background-position: center;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(3.04%, #000000), color-stop(77.09%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, color-stop(-1.77%, #000000), color-stop(60.34%, rgba(0, 0, 0, 0))), url("../img/index/top-background.jpg");
-  background-image: linear-gradient(360deg, #000000 3.04%, rgba(0, 0, 0, 0) 77.09%), linear-gradient(180deg, #000000 -1.77%, rgba(0, 0, 0, 0) 60.34%), url("../img/index/top-background.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(3.04%, #000000), color-stop(77.09%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, color-stop(-1.77%, #000000), color-stop(60.34%, rgba(0, 0, 0, 0))), url("../img/index/header/top-background.jpg");
+  background-image: linear-gradient(360deg, #000000 3.04%, rgba(0, 0, 0, 0) 77.09%), linear-gradient(180deg, #000000 -1.77%, rgba(0, 0, 0, 0) 60.34%), url("../img/index/header/top-background.jpg");
   text-align: center;
 }
 
@@ -37,7 +36,7 @@ header nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 13px;
+  padding-top: 13px;
 }
 
 header nav #logo {
@@ -103,7 +102,7 @@ header nav #cart {
 }
 
 header h2 {
-  margin: 100px auto 0 auto;
+  margin: 50px auto 0 auto;
   font-family: 'Diamond Girl';
   font-size: 48px;
   font-weight: lighter;
@@ -115,7 +114,7 @@ header h2 span {
 }
 
 header h1 {
-  margin: 63px auto 0 auto;
+  margin: 40px auto 0 auto;
   font-family: 'Tomatoes';
   font-size: 115px;
   font-weight: normal;
@@ -123,7 +122,7 @@ header h1 {
 }
 
 header #product-list {
-  margin: 63px auto 0 auto;
+  margin: 55px auto 0 auto;
   width: 967px;
 }
 
@@ -133,7 +132,7 @@ header #product-list ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  list-style: url("../img/index/splitter-ellipse.svg");
+  list-style: url("../img/index/header/splitter-ellipse.svg");
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 48px;
@@ -146,5 +145,20 @@ header #product-list ul li:first-child {
 
 header #product-list ul li {
   margin: 0 34px;
+}
+
+header #more-info {
+  margin: 85px auto 0 auto;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  color: white;
+}
+
+header #down-arrows {
+  margin: 25px auto 0 auto;
+}
+
+#about {
+  margin: 80px auto;
 }
 /*# sourceMappingURL=index.css.map */
