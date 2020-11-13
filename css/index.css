@@ -159,6 +159,138 @@ header #down-arrows {
 }
 
 #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 80px auto;
+  max-width: 1135px;
+}
+
+#about #bakery-photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about #bakery-photos #photo-blocks #top-photo {
+  margin-bottom: 22px;
+}
+
+#about #bakery-photos #photo-blocks #bottom-photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about #bakery-photos #scroller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about #bakery-photos #scroller img {
+  margin: 8px 20px;
+}
+
+#about #bakery-photos #scroller #down-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#about #bakery-info {
+  margin-left: 60px;
+}
+
+#about #bakery-info h2 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 48px;
+  color: black;
+}
+
+#about #bakery-info h3 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 36px;
+  color: #E59656;
+  margin-bottom: 25px;
+}
+
+#about #bakery-info p {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  line-height: 25px;
+  color: black;
+}
+
+#about #bakery-info #click-me {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#about #bakery-info #click-me p {
+  color: #E59656;
+  margin-right: 10px;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+#about #bakery-info #buns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+  text-align: center;
+}
+
+#about #bakery-info #buns p {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+#about #bakery-info #buns span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 114px;
+}
+
+#about #bakery-info #buns span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 80px;
 }
 /*# sourceMappingURL=index.css.map */

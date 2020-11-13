@@ -134,6 +134,110 @@ header {
 }
 
 #about {
+    display: flex;
     margin: 80px auto;
+    max-width: 1135px;
+
+    #bakery-photos {
+
+        display: flex;
+        justify-content: center;
+
+        #photo-blocks {
+
+            #top-photo {
+                margin-bottom: 22px;
+            }   
+
+            #bottom-photos {
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+
+        #scroller {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                margin: 8px 20px;
+
+            }
+
+            #down-arrow {
+                transform: rotate(180deg)
+            }
+        }
+    }
+
+    #bakery-info {
+
+        margin-left: 60px;
+
+        h2 {
+            font-family: 'Diamond Girl';
+            font-weight: lighter;
+            font-size: 48px;
+            color: black;
+        }
+
+        h3 {
+            font-family: 'Diamond Girl';
+            font-weight: lighter;
+            font-size: 36px;
+            color: $secondary-color;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            line-height: 25px;
+            color: black;
+        }
+
+        #click-me {
+
+            margin-top: 25px;
+            display: flex;
+
+            p {
+                color: $secondary-color;
+                margin-right: 10px;
+                transform: translateY(-3px);
+            }
+        }
+
+        #buns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            text-align: center;
+
+            p {
+                font-family: 'Diamond Girl';
+                font-weight: lighter;
+                font-size: 24px;
+            }
+
+            span {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 114px;
+
+                div {
+                    display: flex;
+                    justify-content: space-around;
+                    height: 80px;
+                }
+            }
+        }
+
+    }
 
 }
