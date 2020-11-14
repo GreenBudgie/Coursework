@@ -241,3 +241,55 @@ header {
     }
 
 }
+
+#game {
+    height: 421px;
+    display: flex;
+    justify-content: center;
+    background: url("../img/index/game/background.png");
+
+    #game-inner {
+        width: $grid-width;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #game-info {
+            color: $primary-color;
+            width: 700px;
+
+            h2 {
+                font-family: 'Diamond Girl';
+                font-weight: lighter;
+                font-size: 64px;
+                line-height: 78px;
+                margin-bottom: 35px;
+            }
+
+            p {
+                font-family: 'Open Sans';
+                font-size: 24px;
+                line-height: 33px;
+            }
+
+            span {
+                color: $secondary-color;
+            }
+        }
+
+        #goto {
+
+            p {
+                color: $primary-color;
+                font-family: 'Diamond Girl';
+                font-weight: lighter;
+                font-size: 48px;
+            }
+
+            img {
+               transform: translateY(-12px);
+            }
+        }
+    }
+}

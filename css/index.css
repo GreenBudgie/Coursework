@@ -293,4 +293,64 @@ header #down-arrows {
       justify-content: space-around;
   height: 80px;
 }
+
+#game {
+  height: 421px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/index/game/background.png");
+}
+
+#game #game-inner {
+  width: 1170px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#game #game-inner #game-info {
+  color: white;
+  width: 700px;
+}
+
+#game #game-inner #game-info h2 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 64px;
+  line-height: 78px;
+  margin-bottom: 35px;
+}
+
+#game #game-inner #game-info p {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  line-height: 33px;
+}
+
+#game #game-inner #game-info span {
+  color: #E59656;
+}
+
+#game #game-inner #goto p {
+  color: white;
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 48px;
+}
+
+#game #game-inner #goto img {
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+}
 /*# sourceMappingURL=index.css.map */
