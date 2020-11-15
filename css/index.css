@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'Tomatoes';
   src: url("../font/tomatoes.ttf") format("truetype");
@@ -154,8 +158,53 @@ header #more-info {
   color: white;
 }
 
-header #down-arrows {
+header #header-arrows {
   margin: 25px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header #header-arrows img {
+  margin: -4px auto;
+}
+
+@-webkit-keyframes blink-opacity {
+  0% {
+    opacity: 100%;
+  }
+  40% {
+    opacity: 50%;
+  }
+  80% {
+    opacity: 100%;
+  }
+}
+
+@keyframes blink-opacity {
+  0% {
+    opacity: 100%;
+  }
+  40% {
+    opacity: 50%;
+  }
+  80% {
+    opacity: 100%;
+  }
+}
+
+header #header-arrows #down-arrow-top {
+  -webkit-animation: "blink-opacity" 2s infinite ease;
+          animation: "blink-opacity" 2s infinite ease;
+}
+
+header #header-arrows #down-arrow-bottom {
+  -webkit-animation: "blink-opacity" 2s infinite ease 0.3s;
+          animation: "blink-opacity" 2s infinite ease 0.3s;
 }
 
 #about {
