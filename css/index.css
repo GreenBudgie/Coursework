@@ -263,6 +263,19 @@ header #down-arrows {
   text-align: center;
 }
 
+#about #bakery-info #buns a {
+  text-decoration: none;
+}
+
+#about #bakery-info #buns a img {
+  -webkit-transition: scale 0.3s ease;
+  transition: scale 0.3s ease;
+}
+
+#about #bakery-info #buns a:hover img {
+  scale: 110%;
+}
+
 #about #bakery-info #buns p {
   font-family: 'Diamond Girl';
   font-weight: lighter;

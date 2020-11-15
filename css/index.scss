@@ -216,6 +216,20 @@ header {
             justify-content: space-between;
             margin-top: 25px;
             text-align: center;
+            
+            a {
+                text-decoration: none;
+            
+                img {
+                    transition: scale 0.3s ease;
+                }
+
+                &:hover {
+                    img {
+                        scale: 110%;
+                    }
+                }
+            }
 
             p {
                 font-family: 'Diamond Girl';
