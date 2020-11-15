@@ -342,15 +342,40 @@ header #down-arrows {
   color: #E59656;
 }
 
+#game #game-inner a {
+  text-decoration: none;
+}
+
+#game #game-inner a:hover::after {
+  color: #E59656;
+  width: 120%;
+}
+
+#game #game-inner a::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0%;
+  height: 3px;
+  background-color: #E59656;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+#game #game-inner #goto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #game #game-inner #goto p {
   color: white;
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 48px;
-}
-
-#game #game-inner #goto img {
-  -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
 }
 /*# sourceMappingURL=index.css.map */

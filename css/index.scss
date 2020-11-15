@@ -278,17 +278,34 @@ header {
             }
         }
 
+        a {
+            text-decoration: none;
+
+            &:hover::after {
+                color: $secondary-color;
+                width: 120%;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: relative;
+                width: 0%;
+                height: 3px;
+                background-color: $secondary-color;
+                transition: width 0.3s ease;
+            }
+        }
+
         #goto {
+            display: flex;
+            flex-direction: column;
 
             p {
                 color: $primary-color;
                 font-family: 'Diamond Girl';
                 font-weight: lighter;
                 font-size: 48px;
-            }
-
-            img {
-               transform: translateY(-12px);
             }
         }
     }
