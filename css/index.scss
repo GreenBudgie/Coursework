@@ -355,3 +355,57 @@ header {
         }
     }
 }
+
+#contacts {
+    display: flex;
+    justify-content: space-between;
+    width: $grid-width;
+    margin: 80px auto;
+    position: relative;
+
+    #contacts-list {
+
+        h2 {
+            font-family: 'Diamond Girl';
+            font-weight: lighter;
+            font-size: 48px;
+            margin-bottom: 55px;
+        }
+
+        .contacts-section {
+
+            margin-bottom: 55px;
+
+            h3 {
+                font-family: 'Diamond Girl';
+                font-weight: lighter;
+                font-size: 36px;
+                color: $secondary-color;
+            }
+
+            p {
+                font-family: 'Open Sans';
+                font-size: 18px;
+            }
+
+        }
+
+        img {
+            position: absolute;
+            left: -280px;
+            bottom: -250px;
+        }
+
+    }
+
+    #contacts-photos {
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+    }
+
+}

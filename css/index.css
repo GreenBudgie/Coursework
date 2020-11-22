@@ -440,4 +440,55 @@ header #header-arrows #down-arrow-bottom {
   font-weight: lighter;
   font-size: 48px;
 }
+
+#contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1170px;
+  margin: 80px auto;
+  position: relative;
+}
+
+#contacts #contacts-list h2 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 48px;
+  margin-bottom: 55px;
+}
+
+#contacts #contacts-list .contacts-section {
+  margin-bottom: 55px;
+}
+
+#contacts #contacts-list .contacts-section h3 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 36px;
+  color: #E59656;
+}
+
+#contacts #contacts-list .contacts-section p {
+  font-family: 'Open Sans';
+  font-size: 18px;
+}
+
+#contacts #contacts-list img {
+  position: absolute;
+  left: -280px;
+  bottom: -250px;
+}
+
+#contacts #contacts-photos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
 /*# sourceMappingURL=index.css.map */
