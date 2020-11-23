@@ -45,8 +45,8 @@ html {
   font-family: 'Diamond Girl';
   font-size: 36px;
   color: #E59656;
-  -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
 }
 
 header {
@@ -480,6 +480,7 @@ header #header-arrows #down-arrow-bottom {
   position: absolute;
   left: -280px;
   bottom: -250px;
+  z-index: -1;
 }
 
 #contacts #contacts-photos div {
@@ -490,5 +491,59 @@ header #header-arrows #down-arrow-bottom {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 30px;
+}
+
+footer {
+  background-color: black;
+  height: 179px;
+  padding: auto;
+}
+
+footer div {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1170px;
+  margin: auto;
+}
+
+footer div .logo #logo-text {
+  font-size: 36px;
+}
+
+footer div .logo #bottom-text {
+  font-size: 24px;
+}
+
+footer div #footer-info {
+  text-align: center;
+}
+
+footer div #footer-info p {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+footer div #footer-info a {
+  text-decoration: none;
+}
+
+footer div #footer-info #policy {
+  text-decoration: underline;
+}
+
+footer div #footer-social img {
+  margin: 0px 10px;
 }
 /*# sourceMappingURL=index.css.map */

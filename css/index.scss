@@ -27,7 +27,7 @@ html {
             font-family: 'Diamond Girl';
             font-size: 36px;
             color: $secondary-color;
-            transform: translateY(-35px)
+            transform: translateY(-1em)
         }
     }
 }
@@ -394,6 +394,7 @@ header {
             position: absolute;
             left: -280px;
             bottom: -250px;
+            z-index: -1;
         }
 
     }
@@ -408,4 +409,59 @@ header {
 
     }
 
+}
+
+footer {
+
+    background-color: black;
+    height: 179px;
+    padding: auto;
+
+    div {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: $grid-width;
+        margin: auto;
+
+        .logo {
+
+            #logo-text {
+                font-size: 36px;
+            }
+
+            #bottom-text {
+                font-size: 24px;
+            }
+
+        }
+
+        #footer-info {
+
+            text-align: center;
+
+            p {
+                color: $primary-color;
+                font-family: 'Open Sans';
+                font-size: 14px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            #policy {
+                text-decoration: underline;
+            }
+
+        }
+
+        #footer-social img {
+            margin: 0px 10px;
+        }
+
+    }
 }
