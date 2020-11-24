@@ -1,8 +1,8 @@
 @mixin colorize {
-    @if $header-text-color == null {
+    @if $light-text {
         color: $primary-color;
     } @else {
-        color: $header-text-color;
+        color: black;
     }
 }
 
