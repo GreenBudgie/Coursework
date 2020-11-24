@@ -2,6 +2,16 @@ $primary-color: white;
 $secondary-color: #E59656;
 $grid-width: 1170px;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Tomatoes';
     src: url('../font/tomatoes.ttf') format('truetype');

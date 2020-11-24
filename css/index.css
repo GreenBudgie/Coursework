@@ -58,6 +58,31 @@ header {
   text-align: center;
 }
 
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+header .logo span {
+  margin: 0px 17px;
+}
+
+header .logo span #logo-text {
+  font-family: 'Tomatoes';
+  font-size: 48px;
+  color: white;
+}
+
+header .logo span #bottom-text {
+  font-family: 'Diamond Girl';
+  font-size: 36px;
+  color: #E59656;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;

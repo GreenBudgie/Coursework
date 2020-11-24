@@ -1,36 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 @import 'presets';
-
-.logo {
-    display: flex;
-    text-align: left;
-
-    span {
-        margin: 0px 17px;
-        
-        #logo-text {
-            font-family: 'Tomatoes';
-            font-size: 48px;
-            color: $primary-color;
-        }
-
-        #bottom-text {
-            font-family: 'Diamond Girl';
-            font-size: 36px;
-            color: $secondary-color;
-            transform: translateY(-1em)
-        }
-    }
-}
 
 header {
     width: 100%;
@@ -41,44 +9,7 @@ header {
                         url("../img/index/header/top-background.jpg");
     text-align: center;
                     
-    nav {
-        display: flex;
-        justify-content: center;
-        padding-top: 13px;
-
-        #navbar {
-            margin: auto 0;
-            padding: 0 120px;
-
-            ul {
-                display: flex;
-                justify-content: space-between;
-                list-style: none;
-                font-family: 'Diamond Girl';
-                font-weight: lighter;
-                font-size: 30px;
-
-                li {
-                    margin: 0 26px;
-                }
-            }
-
-            a {
-                text-decoration: none;
-                color: $primary-color;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: $secondary-color;
-                }
-            }
-        }
-
-        #cart {
-            margin: auto 0;
-        }
-
-    }
+    @import 'header';
 
     h2 {
         margin: 50px auto 0 auto;

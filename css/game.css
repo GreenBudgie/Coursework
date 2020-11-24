@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Tomatoes';
+  src: url("../font/tomatoes.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../font/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Diamond Girl';
+  src: url("../font/diamond-girl-skinny.otf") format("opentype");
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.logo span {
+  margin: 0px 17px;
+}
+
+.logo span #logo-text {
+  font-family: 'Tomatoes';
+  font-size: 48px;
+  color: black;
+}
+
+.logo span #bottom-text {
+  font-family: 'Diamond Girl';
+  font-size: 36px;
+  color: #E59656;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 13px;
+}
+
+nav #navbar {
+  margin: auto 0;
+  padding: 0 120px;
+}
+
+nav #navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+nav #navbar ul li {
+  margin: 0 26px;
+}
+
+nav #navbar a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+nav #navbar a:hover {
+  color: #E59656;
+}
+
+nav #cart {
+  margin: auto 0;
+}
+/*# sourceMappingURL=game.css.map */
