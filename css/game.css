@@ -120,17 +120,36 @@ nav #cart {
   color: #E59656;
 }
 
-@-webkit-keyframes slide-from-top {
+@-webkit-keyframes opacity-change {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
   }
   66% {
     opacity: 1;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes opacity-change {
+  from {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-from-top {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -138,15 +157,10 @@ nav #cart {
 
 @keyframes slide-from-top {
   from {
-    opacity: 0;
     -webkit-transform: translateY(-50px);
             transform: translateY(-50px);
   }
-  66% {
-    opacity: 1;
-  }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -159,8 +173,8 @@ nav #cart {
   margin: 20px auto 35px auto;
   text-align: center;
   opacity: 0;
-  -webkit-animation: slide-from-top 1s ease-out forwards;
-          animation: slide-from-top 1s ease-out forwards;
+  -webkit-animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
+          animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
 }
 
 #cards {
@@ -178,15 +192,10 @@ nav #cart {
 
 @-webkit-keyframes slide-from-left {
   from {
-    opacity: 0;
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
   }
-  66% {
-    opacity: 1;
-  }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -194,15 +203,10 @@ nav #cart {
 
 @keyframes slide-from-left {
   from {
-    opacity: 0;
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
   }
-  66% {
-    opacity: 1;
-  }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -210,15 +214,10 @@ nav #cart {
 
 @-webkit-keyframes slide-from-right {
   from {
-    opacity: 0;
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
   }
-  66% {
-    opacity: 1;
-  }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -226,15 +225,10 @@ nav #cart {
 
 @keyframes slide-from-right {
   from {
-    opacity: 0;
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
   }
-  66% {
-    opacity: 1;
-  }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -242,14 +236,14 @@ nav #cart {
 
 #cards #select-pretzel {
   opacity: 0;
-  -webkit-animation: slide-from-left 1s ease-out 0.5s forwards;
-          animation: slide-from-left 1s ease-out 0.5s forwards;
+  -webkit-animation: slide-from-left 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
+          animation: slide-from-left 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
 }
 
 #cards #select-bagel {
   opacity: 0;
-  -webkit-animation: slide-from-right 1s ease-out 0.5s forwards;
-          animation: slide-from-right 1s ease-out 0.5s forwards;
+  -webkit-animation: slide-from-right 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
+          animation: slide-from-right 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
 }
 
 #cards .card {
@@ -259,6 +253,12 @@ nav #cart {
   -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
           box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
   font-family: 'Diamond Girl';
+  border: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
 }
 
 #cards .card div {
@@ -294,5 +294,12 @@ nav #cart {
   font-size: 24px;
   line-height: 29px;
   margin-top: 25px;
+}
+
+#cards .card:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
+          box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
 }
 /*# sourceMappingURL=game.css.map */

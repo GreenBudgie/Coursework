@@ -10,16 +10,23 @@
 
 @include page-path;
 
-@keyframes slide-from-top {
+@keyframes opacity-change {
     from {
         opacity: 0;
-        transform: translateY(-50px);
     }
     66% {
         opacity: 1;
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes slide-from-top {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
         transform: translateX(0);
     }
 }
@@ -31,7 +38,7 @@
     margin: 20px auto 35px auto;
     text-align: center;
     opacity: 0;
-    animation: slide-from-top 1s ease-out forwards;
+    animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
 }
 
 #cards {
@@ -44,49 +51,41 @@
 
     @keyframes slide-from-left {
         from {
-            opacity: 0;
             transform: translateX(-100px);
         }
-        66% {
-            opacity: 1;
-        }
         to {
-            opacity: 1;
             transform: translateX(0);
         }
     }
 
     @keyframes slide-from-right {
         from {
-            opacity: 0;
             transform: translateX(100px);
         }
-        66% {
-            opacity: 1;
-        }
         to {
-            opacity: 1;
             transform: translateX(0);
         }
     }
 
     #select-pretzel {
         opacity: 0;
-        animation: slide-from-left 1s ease-out 0.5s forwards;
+        animation: slide-from-left 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
     }
 
     #select-bagel {
         opacity: 0;
-        animation: slide-from-right 1s ease-out 0.5s forwards;
+        animation: slide-from-right 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
     }
 
     .card {
-
         padding: 32px;
         width: 375px;
         background: white;
         box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
         font-family: 'Diamond Girl';
+        border: none;
+        cursor: pointer;
+        transition: box-shadow 0.3s, transform 0.3s;
 
         div {
             display: flex;
@@ -110,6 +109,11 @@
             font-size: 24px;
             line-height: 29px;
             margin-top: 25px;
+        }
+
+        &:hover {
+            transform: translateY(-20px);
+            box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
         }
     }
 }
