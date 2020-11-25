@@ -10,12 +10,28 @@
 
 @include page-path;
 
+@keyframes slide-from-top {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    66% {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 #select-card-text {
     font-family: 'Diamond Girl';
     font-weight: lighter;
     font-size: 64px;
     margin: 20px auto 35px auto;
     text-align: center;
+    opacity: 0;
+    animation: slide-from-top 1s ease-out forwards;
 }
 
 #cards {
@@ -26,7 +42,46 @@
     margin: 0 auto 200px auto;
     text-align: center;
 
+    @keyframes slide-from-left {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        66% {
+            opacity: 1;
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-from-right {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        66% {
+            opacity: 1;
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    #select-pretzel {
+        opacity: 0;
+        animation: slide-from-left 1s ease-out 0.5s forwards;
+    }
+
+    #select-bagel {
+        opacity: 0;
+        animation: slide-from-right 1s ease-out 0.5s forwards;
+    }
+
     .card {
+
         padding: 32px;
         width: 375px;
         background: white;
