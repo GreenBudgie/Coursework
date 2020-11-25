@@ -68,6 +68,10 @@ header nav {
   padding-top: 13px;
 }
 
+header nav a {
+  text-decoration: none;
+}
+
 header nav #navbar {
   margin: auto 0;
   padding: 0 120px;

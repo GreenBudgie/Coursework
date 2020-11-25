@@ -59,6 +59,10 @@ nav {
   padding-top: 13px;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 nav #navbar {
   margin: auto 0;
   padding: 0 120px;
@@ -94,5 +98,12 @@ nav #navbar a:hover {
 
 nav #cart {
   margin: auto 0;
+}
+
+#underline {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-15px);
+          transform: translateX(-50%) translateY(-15px);
 }
 /*# sourceMappingURL=game.css.map */

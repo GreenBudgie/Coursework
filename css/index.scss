@@ -9,8 +9,7 @@ header {
                         url("../img/index/header/top-background.jpg");
     text-align: center;
                     
-    $light-text: true;
-    @import 'header';
+    @include navigation-bar(true);
 
     h2 { 
         margin: 50px auto 0 auto;
