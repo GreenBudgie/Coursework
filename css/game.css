@@ -106,4 +106,17 @@ nav #cart {
   -webkit-transform: translateX(-50%) translateY(-15px);
           transform: translateX(-50%) translateY(-15px);
 }
+
+#page-path {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  color: #666666;
+  width: 1170px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#page-path span {
+  color: #E59656;
+}
 /*# sourceMappingURL=game.css.map */
