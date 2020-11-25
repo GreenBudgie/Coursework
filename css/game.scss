@@ -9,3 +9,52 @@
 }
 
 @include page-path;
+
+#select-card-text {
+    font-family: 'Diamond Girl';
+    font-weight: lighter;
+    font-size: 64px;
+    margin: 20px auto 35px auto;
+    text-align: center;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+    width: 770px;
+    height: 515px;
+    margin: 0 auto 200px auto;
+    text-align: center;
+
+    .card {
+        padding: 32px;
+        width: 375px;
+        background: white;
+        box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+        font-family: 'Diamond Girl';
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 365px;
+        
+            img {
+                width: min-content;
+            }
+            
+            h2 {
+                font-weight: lighter;
+                font-size: 48px;
+            }
+        }
+
+        p {
+            font-weight: lighter;
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 25px;
+        }
+    }
+}
