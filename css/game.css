@@ -172,11 +172,21 @@ nav #cart {
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 64px;
-  margin: 20px auto 35px auto;
+  margin: 0 auto 35px auto;
   text-align: center;
   opacity: 0;
   -webkit-animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
           animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
+}
+
+#main-wrapper {
+  max-width: 1170px;
+  height: 670px;
+  margin: 15px auto 150px auto;
+}
+
+#main-wrapper .inactive {
+  display: none;
 }
 
 #cards {
@@ -188,7 +198,7 @@ nav #cart {
           justify-content: space-between;
   width: 770px;
   height: 515px;
-  margin: 0 auto 200px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -233,6 +243,20 @@ nav #cart {
   to {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes select-bun {
+  to {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
+@keyframes select-bun {
+  to {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
 }
 

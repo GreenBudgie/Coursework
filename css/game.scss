@@ -38,10 +38,20 @@
     font-family: 'Diamond Girl';
     font-weight: lighter;
     font-size: 64px;
-    margin: 20px auto 35px auto;
+    margin: 0 auto 35px auto;
     text-align: center;
     opacity: 0;
     animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
+}
+
+#main-wrapper {
+    max-width: $grid-width;
+    height: 670px;
+    margin: 15px auto 150px auto;
+
+    .inactive {
+        display: none;
+    }
 }
 
 #cards {
@@ -49,7 +59,7 @@
     justify-content: space-between;
     width: 770px;
     height: 515px;
-    margin: 0 auto 200px auto;
+    margin: 0 auto;
     text-align: center;
 
     @keyframes slide-from-left {
@@ -67,6 +77,12 @@
         }
         to {
             transform: translateX(0);
+        }
+    }
+
+    @keyframes select-bun {
+        to {
+            transform: translateY(-50px);
         }
     }
 
