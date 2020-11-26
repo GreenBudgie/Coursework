@@ -105,6 +105,8 @@ nav #cart {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-15px);
           transform: translateX(-50%) translateY(-15px);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #page-path {
