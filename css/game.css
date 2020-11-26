@@ -259,6 +259,7 @@ nav #cart {
   transition: -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
   transition: box-shadow 0.3s, transform 0.3s;
   transition: box-shadow 0.3s, transform 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+  border-radius: 50px;
 }
 
 #cards .card div {
@@ -301,5 +302,60 @@ nav #cart {
           transform: translateY(-20px);
   -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
           box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
+}
+
+footer {
+  background-color: black;
+  height: 179px;
+  padding: auto;
+}
+
+footer div {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1170px;
+  margin: auto;
+}
+
+footer div .logo #logo-text {
+  color: white;
+  font-size: 36px;
+}
+
+footer div .logo #bottom-text {
+  font-size: 24px;
+}
+
+footer div #footer-info {
+  text-align: center;
+}
+
+footer div #footer-info p {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+footer div #footer-info a {
+  text-decoration: none;
+}
+
+footer div #footer-info #policy {
+  text-decoration: underline;
+}
+
+footer div #footer-social img {
+  margin: 0px 10px;
 }
 /*# sourceMappingURL=game.css.map */

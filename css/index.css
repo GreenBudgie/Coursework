@@ -525,6 +525,7 @@ footer div {
 }
 
 footer div .logo #logo-text {
+  color: white;
   font-size: 36px;
 }
 

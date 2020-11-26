@@ -87,6 +87,7 @@
         border: none;
         cursor: pointer;
         transition: box-shadow 0.3s, transform 0.3s;
+        border-radius: 50px;
 
         div {
             display: flex;
@@ -118,3 +119,5 @@
         }
     }
 }
+
+@include footer;

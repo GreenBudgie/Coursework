@@ -106,6 +106,63 @@ html {
 
 }
 
+@mixin footer() {
+    footer {
+        background-color: black;
+        height: 179px;
+        padding: auto;
+    
+        div {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: $grid-width;
+            margin: auto;
+    
+            .logo {
+    
+                #logo-text {
+                    color: $primary-color;
+                    font-size: 36px;
+                }
+    
+                #bottom-text {
+                    font-size: 24px;
+                }
+    
+            }
+    
+            #footer-info {
+    
+                text-align: center;
+    
+                p {
+                    color: $primary-color;
+                    font-family: 'Open Sans';
+                    font-size: 14px;
+                }
+    
+                a {
+                    text-decoration: none;
+                }
+    
+                #policy {
+                    text-decoration: underline;
+                }
+    
+            }
+    
+            #footer-social img {
+                margin: 0px 10px;
+            }
+    
+        }
+    }
+}
+
 @mixin page-path() {
     #page-path {
         font-family: 'Open Sans';

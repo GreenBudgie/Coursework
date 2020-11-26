@@ -10,7 +10,7 @@ header {
                         linear-gradient(180deg, #000000 -1.77%, rgba(0, 0, 0, 0) 60.34%), 
                         url("../img/index/header/top-background.jpg");
     text-align: center;
-                    
+    
     @include navigation-bar(true);
 
     h2 { 
@@ -344,57 +344,4 @@ header {
 
 }
 
-footer {
-
-    background-color: black;
-    height: 179px;
-    padding: auto;
-
-    div {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: $grid-width;
-        margin: auto;
-
-        .logo {
-
-            #logo-text {
-                font-size: 36px;
-            }
-
-            #bottom-text {
-                font-size: 24px;
-            }
-
-        }
-
-        #footer-info {
-
-            text-align: center;
-
-            p {
-                color: $primary-color;
-                font-family: 'Open Sans';
-                font-size: 14px;
-            }
-
-            a {
-                text-decoration: none;
-            }
-
-            #policy {
-                text-decoration: underline;
-            }
-
-        }
-
-        #footer-social img {
-            margin: 0px 10px;
-        }
-
-    }
-}
+@include footer;
