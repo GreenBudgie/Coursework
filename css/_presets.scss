@@ -27,7 +27,7 @@ html {
     src: url('../font/diamond-girl-skinny.otf') format('opentype');
 }
 
-@mixin navigation-bar($light-text: false) {
+@mixin logo($light-text: false) {
     .logo {
         display: flex;
         text-align: left;
@@ -53,6 +53,9 @@ html {
             }
         }
     }
+}
+
+@mixin navigation-bar($light-text: false) {
     
     nav {
         display: flex;

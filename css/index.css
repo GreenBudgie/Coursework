@@ -24,6 +24,31 @@ html {
   src: url("../font/diamond-girl-skinny.otf") format("opentype");
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.logo span {
+  margin: 0px 17px;
+}
+
+.logo span #logo-text {
+  font-family: 'Tomatoes';
+  font-size: 48px;
+  color: white;
+}
+
+.logo span #bottom-text {
+  font-family: 'Diamond Girl';
+  font-size: 36px;
+  color: #E59656;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
 header {
   width: 100%;
   height: 950px;
@@ -31,31 +56,6 @@ header {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(3.04%, #000000), color-stop(77.09%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, color-stop(-1.77%, #000000), color-stop(60.34%, rgba(0, 0, 0, 0))), url("../img/index/header/top-background.jpg");
   background-image: linear-gradient(360deg, #000000 3.04%, rgba(0, 0, 0, 0) 77.09%), linear-gradient(180deg, #000000 -1.77%, rgba(0, 0, 0, 0) 60.34%), url("../img/index/header/top-background.jpg");
   text-align: center;
-}
-
-header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-}
-
-header .logo span {
-  margin: 0px 17px;
-}
-
-header .logo span #logo-text {
-  font-family: 'Tomatoes';
-  font-size: 48px;
-  color: white;
-}
-
-header .logo span #bottom-text {
-  font-family: 'Diamond Girl';
-  font-size: 36px;
-  color: #E59656;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
 }
 
 header nav {
