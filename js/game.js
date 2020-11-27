@@ -2,10 +2,13 @@ let selectBagel;
 let canSelect = false;
 let gameStarted = false;
 
-//Добавляем возможность выбирать карточки только после завершения начальной анимации
+let bagelCard = document.querySelector('.select-bagel');
+let pretzelCard = document.querySelector('.select-pretzel');
+
 let cards = document.getElementsByClassName('card');
 for(let card of cards) {
     card.addEventListener('animationend', animation => {
+        //Добавляем возможность выбирать карточки только после завершения начальной анимации
         if(animation.animationName === 'slide-from-left' || animation.animationName === 'slide-from-right') {
             canSelect = true;
             card.classList.add('ready-to-select');
@@ -18,13 +21,32 @@ function cloneElement(element) {
     element.parentNode.replaceChild(clone, element);
 }
 
-function startGame(clickedElement, isBagel) {
-    if(!gameStarted && canSelect) {
-        clickedElement.classList.add('selected');
-        clickedElement.classList.remove('select-pretzel');
-        clickedElement.classList.remove('select-bagel');
-        cloneElement(clickedElement);
+function startGame(selectedBun) {
+    if(canSelect) {
+        isBagel = selectedBun.classList.contains('select-bagel');
         selectBagel = isBagel;
-        gameStarted = true;
+
+        //Проигрываем анимацию для выбранной и проигнорированной карточки
+        for(let card of cards) {
+            card.classList.add(card == selectedBun ? 'selected-bun' : 'ignored-bun');
+            if(card != selectedBun) card.classList.remove('ready-to-select');
+            card.classList.remove('select-pretzel');
+            card.classList.remove('select-bagel');
+            cloneElement(card);
+        }
+
+        
+
+        let topText = document.querySelector('.select-card-text-in');    
+        topText.classList.remove('select-card-text-in');
+        topText.classList.add('select-card-text-out');
+        cloneElement(topText);
+
+        canSelect = false;
+
+        setTimeout(() => {
+            document.getElementById('card-wrapper').classList.add('inactive');
+            gameStarted = true;
+        }, 500);
     }
 }

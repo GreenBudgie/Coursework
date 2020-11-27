@@ -168,15 +168,45 @@ nav #cart {
   }
 }
 
+@-webkit-keyframes h-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes h-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+.select-card-text-in {
+  opacity: 0;
+  -webkit-animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
+          animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
+}
+
+.select-card-text-out {
+  -webkit-animation: h-hide 0.5s ease-out;
+          animation: h-hide 0.5s ease-out;
+}
+
 #select-card-text {
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 64px;
   margin: 0 auto 35px auto;
   text-align: center;
-  opacity: 0;
-  -webkit-animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
-          animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
 }
 
 #main-wrapper {
@@ -185,7 +215,7 @@ nav #cart {
   margin: 15px auto 150px auto;
 }
 
-#main-wrapper .inactive {
+.inactive {
   display: none;
 }
 
@@ -268,6 +298,28 @@ nav #cart {
   }
 }
 
+@-webkit-keyframes ignore-bun {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(90%);
+            transform: scale(90%);
+  }
+}
+
+@keyframes ignore-bun {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(90%);
+            transform: scale(90%);
+  }
+}
+
 #cards .select-pretzel {
   opacity: 0;
   -webkit-animation: slide-from-left 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
@@ -287,9 +339,14 @@ nav #cart {
           box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
 }
 
-#cards .selected {
+#cards .selected-bun {
   -webkit-animation: select-bun 0.5s ease-out;
           animation: select-bun 0.5s ease-out;
+}
+
+#cards .ignored-bun {
+  -webkit-animation: ignore-bun 0.5s ease-out;
+          animation: ignore-bun 0.5s ease-out;
 }
 
 #cards .card {

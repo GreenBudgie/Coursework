@@ -34,24 +34,41 @@
     }
 }
 
+@keyframes h-hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.select-card-text-in {
+    opacity: 0;
+    animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
+}
+
+.select-card-text-out {
+    animation: h-hide 0.5s ease-out;
+}
+
 #select-card-text {
     font-family: 'Diamond Girl';
     font-weight: lighter;
     font-size: 64px;
     margin: 0 auto 35px auto;
     text-align: center;
-    opacity: 0;
-    animation: slide-from-top 1s ease-out, opacity-change 1s ease-out forwards;
 }
 
 #main-wrapper {
     max-width: $grid-width;
     height: 670px;
     margin: 15px auto 150px auto;
+}
 
-    .inactive {
-        display: none;
-    }
+.inactive {
+    display: none;
 }
 
 #cards {
@@ -90,6 +107,16 @@
         }
     }
 
+    @keyframes ignore-bun {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+            transform: scale(90%);
+        }
+    }
+
     .select-pretzel {
         opacity: 0;
         animation: slide-from-left 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
@@ -105,8 +132,12 @@
         box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
     }
 
-    .selected {
+    .selected-bun {
         animation: select-bun 0.5s ease-out;
+    }
+
+    .ignored-bun {
+        animation: ignore-bun 0.5s ease-out;
     }
 
     .card {
