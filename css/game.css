@@ -446,8 +446,8 @@ nav #cart {
 
 #game-wrapper #game-field table button:hover .ghost-bun {
   opacity: 0.4;
-  -webkit-transform: translate(-50%, -50%) scale(100%);
-          transform: translate(-50%, -50%) scale(100%);
+  -webkit-transform: translate(-50%, -50%) scale(95%);
+          transform: translate(-50%, -50%) scale(95%);
 }
 
 #game-wrapper #game-field table button img {
@@ -455,12 +455,22 @@ nav #cart {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(90%);
-          transform: translate(-50%, -50%) scale(90%);
+  -webkit-transform: translate(-50%, -50%) scale(85%);
+          transform: translate(-50%, -50%) scale(85%);
   -webkit-transition: opacity 0.15s ease-out, -webkit-transform 0.3s ease-out;
   transition: opacity 0.15s ease-out, -webkit-transform 0.3s ease-out;
   transition: opacity 0.15s ease-out, transform 0.3s ease-out;
   transition: opacity 0.15s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+#game-wrapper #game-field table button .placed {
+  -webkit-transition: opacity 0.15s ease-out, -webkit-transform 0.4s cubic-bezier(0.5, -5, 0.5, 5);
+  transition: opacity 0.15s ease-out, -webkit-transform 0.4s cubic-bezier(0.5, -5, 0.5, 5);
+  transition: opacity 0.15s ease-out, transform 0.4s cubic-bezier(0.5, -5, 0.5, 5);
+  transition: opacity 0.15s ease-out, transform 0.4s cubic-bezier(0.5, -5, 0.5, 5), -webkit-transform 0.4s cubic-bezier(0.5, -5, 0.5, 5);
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(100%);
+          transform: translate(-50%, -50%) scale(100%);
 }
 
 #game-wrapper #game-field table tr {

@@ -213,10 +213,9 @@
                 background-color: white;
 
                 &:hover {
-
                     .ghost-bun {
                         opacity: 0.4;
-                        transform: translate(-50%, -50%) scale(100%);
+                        transform: translate(-50%, -50%) scale(95%);
                     }
                 }
 
@@ -225,8 +224,14 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%) scale(90%);
+                    transform: translate(-50%, -50%) scale(85%);
                     transition: opacity 0.15s ease-out, transform 0.3s ease-out;
+                }
+
+                .placed {
+                    transition: opacity 0.15s ease-out, transform 0.4s cubic-bezier(0.5,-5,0.5,5);
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(100%);
                 }
             }
 

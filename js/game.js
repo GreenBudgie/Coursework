@@ -1,6 +1,6 @@
-let selectBagel;
+let selectBagel = false;
 let canSelect = false;
-let gameStarted = false; //TODO Return to FALSE
+let gameStarted = false;
 
 let bagelCard = document.querySelector('.select-bagel');
 let pretzelCard = document.querySelector('.select-pretzel');
@@ -21,7 +21,7 @@ function cloneElement(element) {
     element.parentNode.replaceChild(clone, element);
 }
 
-function startGame(selectedBun) {
+function cardClick(selectedBun) {
     if(canSelect) {
         isBagel = selectedBun.classList.contains('select-bagel');
         selectBagel = isBagel;
@@ -42,12 +42,15 @@ function startGame(selectedBun) {
 
         canSelect = false;
 
-        setTimeout(() => {
-            document.getElementById('card-wrapper').classList.add('inactive');
-            document.getElementById('game-wrapper').classList.remove('inactive');
-            gameStarted = true;
-        }, 500);
+        setTimeout(startGame, 500);
     }
+}
+
+function startGame() {
+    document.getElementById('card-wrapper').classList.add('inactive');
+    document.getElementById('game-wrapper').classList.remove('inactive');
+    gameStarted = true;
+    enableCellSelection();
 }
 
 //Game logic
@@ -57,15 +60,23 @@ cells.fill(null);
 let buttons = document.querySelectorAll('#game-field button');
 Array.from(buttons).forEach(function(button, i) {
     button.addEventListener('click', () => {
-        fieldClick(button, i);
+        cellClick(i);
     });
 });
-enableCellSelection();
 
 let playerTurn = true;
 
-function fieldClick(button, index) {
-    
+function placeBun(cell) {
+    let bun = getBunAt(cell, true);
+    bun.classList.add('placed');
+    bun.classList.remove('ghost-bun');
+    playerTurn = false;
+}
+
+function cellClick(cell) {
+    if(playerTurn && isCellFree(cell)) {
+        placeBun(cell);
+    }
 }
 
 function isCellFree(cell) {
@@ -89,7 +100,7 @@ function getBunAt(cell, searchForPlayerBun) {
 function enableCellSelection() {
     Array.from(buttons).forEach(function(button, i) {
         if(isCellFree(i)) {
-            getBunFor(button).classList.add('ghost-bun');
+            getBunFor(button, true).classList.add('ghost-bun');
         }
     });
 }
@@ -99,3 +110,5 @@ function disableCellSelection() {
         getBunFor(button).classList.remove('ghost-bun');
     }
 }
+
+startGame();
