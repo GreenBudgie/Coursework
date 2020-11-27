@@ -35,8 +35,6 @@ function startGame(selectedBun) {
             cloneElement(card);
         }
 
-        
-
         let topText = document.querySelector('.select-card-text-in');    
         topText.classList.remove('select-card-text-in');
         topText.classList.add('select-card-text-out');
@@ -49,5 +47,55 @@ function startGame(selectedBun) {
             document.getElementById('game-wrapper').classList.remove('inactive');
             gameStarted = true;
         }, 500);
+    }
+}
+
+//Game logic
+let cells = new Array(9); //true обозначает наличие булочки игрока в этой ячейке, false - бота; null - ячейка пуста
+cells.fill(null);
+
+let buttons = document.querySelectorAll('#game-field button');
+Array.from(buttons).forEach(function(button, i) {
+    button.addEventListener('click', () => {
+        fieldClick(button, i);
+    });
+});
+enableCellSelection();
+
+let playerTurn = true;
+
+function fieldClick(button, index) {
+    
+}
+
+function isCellFree(cell) {
+    return cells[cell] === null;
+}
+
+function getBunFor(button, searchForPlayerBun) {
+    for(let node of button.children) {
+        console.log(node);
+        if(node.classList.contains(!(selectBagel ^ searchForPlayerBun) ? 'game-bagel' : 'game-pretzel')) {
+            return node;
+        }
+    }
+    throw "Inner bun image not found";
+}
+
+function getBunAt(cell, searchForPlayerBun) {
+    return getBunFor(buttons[cell], searchForPlayerBun);
+}
+
+function enableCellSelection() {
+    Array.from(buttons).forEach(function(button, i) {
+        if(isCellFree(i)) {
+            getBunFor(button).classList.add('ghost-bun');
+        }
+    });
+}
+
+function disableCellSelection() {
+    for(let button in buttons) {
+        getBunFor(button).classList.remove('ghost-bun');
     }
 }
