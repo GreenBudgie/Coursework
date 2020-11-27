@@ -65,18 +65,64 @@ Array.from(buttons).forEach(function(button, i) {
 });
 
 let playerTurn = true;
+let gameFinished = false;
 
 function placeBun(cell) {
     let bun = getBunAt(cell, true);
     bun.classList.add('placed');
     bun.classList.remove('ghost-bun');
+    cells[cell] = true;
     playerTurn = false;
+    calculateWin();
+    if(!gameFinished) {
+        botThink();
+    }
+}
+
+function botThink() {
+    
+}
+
+function calculateWin() {
+    let winningCombinations = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], //Horizontal
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], //Vertical
+        [0, 4, 8], [2, 4, 6]]; //Diagonal
+    A: for(let combination of winningCombinations) {
+        let firstBun = cells[combination[0]];
+        for(let cell of combination) {
+            if(cells[cell] == null || cells[cell] != firstBun) continue A; 
+        }
+        if(firstBun) win(); else lose();
+        return;
+    }
+    if(cells.every(val => val != null)) draw();
+}
+
+function win() {
+    gameFinished = true;
+    alert('WIN');
+}
+
+function lose() {
+    gameFinished = true;
+    alert('LOSE');
+}
+
+function draw() {
+    gameFinished = true;
+    alert('DRAW');
 }
 
 function cellClick(cell) {
     if(playerTurn && isCellFree(cell)) {
         placeBun(cell);
     }
+}
+
+function isCellFilledWithPlayerBun(cell) {
+    if(cells[cell] == null) throw `Cannot check an empty cell #${cell}`;
+    return cells[cell];
 }
 
 function isCellFree(cell) {
