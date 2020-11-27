@@ -81,19 +81,32 @@
     }
 
     @keyframes select-bun {
+        from {
+            opacity: 1;
+        }
         to {
-            transform: translateY(-50px);
+            opacity: 0;
+            transform: scale(110%);
         }
     }
 
-    #select-pretzel {
+    .select-pretzel {
         opacity: 0;
         animation: slide-from-left 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
     }
 
-    #select-bagel {
+    .select-bagel {
         opacity: 0;
         animation: slide-from-right 1s ease-out 0.5s, opacity-change 1s ease-out 0.5s forwards;
+    }
+
+    .ready-to-select:hover {
+        transform: translateY(-20px);
+        box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
+    }
+
+    .selected {
+        animation: select-bun 0.5s ease-out;
     }
 
     .card {
@@ -129,11 +142,6 @@
             font-size: 24px;
             line-height: 29px;
             margin-top: 25px;
-        }
-
-        &:hover {
-            transform: translateY(-20px);
-            box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -15px 15px 20px rgba(229, 150, 86, 0.2);
         }
     }
 }

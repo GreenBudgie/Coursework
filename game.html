@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бублики-крендельки</title>
     <link rel="stylesheet" href="css/game.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <!--Repeatable navigation bar-->
@@ -39,10 +38,10 @@
     <p id="page-path">Главная <img src="img/game/arrow-right.svg" alt="arrow"> <span>Игра "Бублики-крендельки"</span></p>
 
     <div id="main-wrapper">
-        <div id="card-wrapper" class="inactive">
+        <div id="card-wrapper">
             <h1 id="select-card-text">Выбери своего героя!</h1>
             <div id="cards">
-                <button class="card" id="select-pretzel" onclick="setIsBagel(false)">
+                <button class="card select-pretzel" onclick="startGame(this, false)">
                     <div>
                         <h2>Я хочу быть</h2>
                         <img src="img/game/pretzel.svg" alt="Кренделек">
@@ -50,7 +49,7 @@
                     </div>
                     <p>Я тот самый вкуснейший кренделек с маком.</p>
                 </button>
-                <button class="card" id="select-bagel" onclick="setIsBagel(true)">
+                <button class="card select-bagel" onclick="startGame(this, true)">
                     <div>
                         <h2>Я хочу быть</h2>
                         <img src="img/game/bagel.svg" alt="Бублик">
@@ -61,7 +60,7 @@
             </div>
         </div>
         <div id="game-wrapper">
-            
+
         </div>
     </div>
     
