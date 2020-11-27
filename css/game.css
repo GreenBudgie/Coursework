@@ -202,6 +202,7 @@ nav #cart {
 }
 
 #select-card-text {
+  display: block;
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 64px;
@@ -217,6 +218,12 @@ nav #cart {
 
 .inactive, .inactive * {
   display: none;
+  top: 0;
+  position: absolute;
+}
+
+#card-wrapper {
+  height: 100%;
 }
 
 #cards {
