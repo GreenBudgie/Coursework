@@ -1,6 +1,6 @@
 let selectBagel;
 let canSelect = false;
-let gameStarted = false;
+let gameStarted = false; //TODO Return to FALSE
 
 let bagelCard = document.querySelector('.select-bagel');
 let pretzelCard = document.querySelector('.select-pretzel');
@@ -46,6 +46,7 @@ function startGame(selectedBun) {
 
         setTimeout(() => {
             document.getElementById('card-wrapper').classList.add('inactive');
+            document.getElementById('game-wrapper').classList.remove('inactive');
             gameStarted = true;
         }, 500);
     }
