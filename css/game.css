@@ -400,6 +400,116 @@ nav #cart {
   margin-top: 25px;
 }
 
+#game-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+#game-wrapper #game-field {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 640px;
+  height: 640px;
+  padding: 35px;
+  -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+          box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+  border-radius: 50px;
+  margin: auto 0;
+}
+
+#game-wrapper #game-field table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#game-wrapper #game-field table button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: white;
+}
+
+#game-wrapper #game-field table button:hover {
+  background-color: #E59656;
+}
+
+#game-wrapper #game-field table tr {
+  border-top: 3px solid #E59656;
+}
+
+#game-wrapper #game-field table tr:first-child {
+  border-top: 0 none;
+}
+
+#game-wrapper #game-field table td {
+  width: 33%;
+  height: 33%;
+  border-left: 3px solid #E59656;
+}
+
+#game-wrapper #game-field table td:first-child {
+  border-left: 0 none;
+}
+
+#game-wrapper #game-info-wrapper {
+  padding-left: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#game-wrapper #game-info-wrapper h2 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 64px;
+}
+
+#game-wrapper #game-info-wrapper h3 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 48px;
+  color: #E59656;
+}
+
+#game-wrapper #game-info-wrapper > p {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  line-height: 33px;
+}
+
+#game-wrapper #game-info-wrapper #prizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+#game-wrapper #game-info-wrapper #prizes h3 {
+  font-size: 64px;
+}
+
+#game-wrapper #game-info-wrapper #prizes p {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 36px;
+}
+
 footer {
   background-color: black;
   height: 179px;

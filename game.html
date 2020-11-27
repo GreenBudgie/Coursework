@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
     <title>Бублики-крендельки</title>
     <link rel="stylesheet" href="css/game.css">
 </head>
@@ -38,8 +38,8 @@
     <p id="page-path">Главная <img src="img/game/arrow-right.svg" alt="arrow"> <span>Игра "Бублики-крендельки"</span></p>
 
     <div id="main-wrapper">
-        <div id="card-wrapper">
-            <h1 id="select-card-text" class="select-card-text-in">Выбери своего героя!</h1>
+        <div id="card-wrapper" class="inactive">
+            <h id="select-card-text" class="select-card-text-in">Выбери своего героя!</h>
             <div id="cards">
                 <button class="card select-pretzel" onclick="startGame(this)">
                     <div>
@@ -59,34 +59,34 @@
                 </button>
             </div>
         </div>
-        <div id="game-wrapper" class="inactive">
+        <div id="game-wrapper">
             <div id="game-field">
                 <table>
                     <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
+                        <td><button></button></td>
+                        <td><button></button></td>
+                        <td><button></button></td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
+                        <td><button></button></td>
+                        <td><button></button></td>
+                        <td><button></button></td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
+                        <td><button></button></td>
+                        <td><button></button></td>
+                        <td><button></button></td>
                     </tr>
                 </table>
             </div>
             <div id="game-info-wrapper">
-                <h2>Бублики-Крендельки</h2>
+                <h2>Бублики&#8209;Крендельки</h2>
                 <h3>Правила игры:</h3>
-                <p>Вы играете за выбранную ранее булочку. Сделайте первый ход - поставьте ее в ячейку. Собрали 3 булочки в ряд, в колонку или по диагонали? Поздравляем, Вы победили! Не не все так просто - наш искусственный интеллект также хочет выиграть!</p>
+                <p>Вы играете за выбранную ранее булочку. Сделайте первый ход - поставьте ее в ячейку. Собрали 3 булочки в ряд, в колонку или по диагонали? Поздравляем, Вы победили! Но не все так просто - наш булочный бот также хочет выиграть!</p>
                 <h3>Возможный выигрыш:</h3>
                 <div id="prizes">
                     <span>
-                        <h3>10%</h3>
+                        <h3>0%</h3>
                         <p>Скидка</p>
                     </span>
                     <span>
