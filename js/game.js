@@ -54,8 +54,8 @@ function startGame() {
 }
 
 //Game logic
-let cells = new Array(9); //true обозначает наличие булочки игрока в этой ячейке, false - бота; null - ячейка пуста
-cells.fill(null);
+let buns = new Array(9); //true обозначает наличие булочки игрока в этой ячейке, false - бота; null - ячейка пуста
+buns.fill(null);
 
 let buttons = Array.from(document.querySelectorAll('#game-field button'));
 buttons.forEach(function(button, i) {
@@ -75,7 +75,7 @@ function placeBun(cell) {
     let bun = getBunAt(cell, playerTurn);
     bun.classList.add('placed');
     bun.classList.remove('ghost-bun');
-    cells[cell] = playerTurn;
+    buns[cell] = playerTurn;
     calculateWin();
     if(!gameFinished) {
         playerTurn = !playerTurn;
@@ -83,7 +83,9 @@ function placeBun(cell) {
             enableCellSelection();
         } else {
             disableCellSelection();
-            botThink();
+            setTimeout(() => {
+                botThink();
+            }, Math.ceil(Math.random() * 700) + 200);
         }
     }
 }
@@ -92,17 +94,38 @@ function botThink() {
     //В первую очередь ищем возможные выигрышные варианты
     for(let combination of winningCombinations) {
         if(getBotBunCountAt(combination) == 2 && hasEmptyCellsAt(combination)) {
+            console.log('Winning');
             placeBun(getFirstEmptyCellAt(combination));
+            return;
         }
     }
+    //Предотвращаем выигрышные комбинации игрока
+    for(let combination of winningCombinations) {
+        console.log(`Combination: ${combination}, player buns: ${getPlayerBunCountAt(combination)}, empty cells: ${hasEmptyCellsAt(combination)}`);
+        if(getPlayerBunCountAt(combination) == 2 && hasEmptyCellsAt(combination)) {
+            console.log('Preventing');
+            placeBun(getFirstEmptyCellAt(combination));
+            return;
+        }
+    }
+    //Если ничего выше не выполнилось - ставим булочку в любую свободную ячейку
+    let emptyCells = new Array(9);
+    buns.forEach((cell, i) => {
+        if(cell == null) {
+            emptyCells[i] = i;
+        }
+    });
+    let cleanEmptyCells = emptyCells.filter(cell => cell != null && cell != undefined);
+    console.log('Random');
+    placeBun(cleanEmptyCells[Math.floor(Math.random() * cleanEmptyCells.length)]);
 }
 
 function getBunsAt(combination) {
-    let buns = new Array[3];
+    let bunsHere = new Array(3);
     combination.forEach((cell, i) => {
-        buns[i] = cells[cell];
+        bunsHere[i] = buns[cell];
     });
-    return buns;
+    return bunsHere;
 }
 
 function hasEmptyCellsAt(combination) {
@@ -117,24 +140,24 @@ function getFirstEmptyCellAt(combination) {
 
 function getPlayerBunCountAt(combination) {
     let buns = getBunsAt(combination);
-    return buns.filter(isCellFilledWithPlayerBun).length;
+    return buns.filter(bun => bun == true).length;
 }
 
 function getBotBunCountAt(combination) {
     let buns = getBunsAt(combination);
-    return buns.filter(isCellFilledWithBotBun).length;
+    return buns.filter(bun => bun == false).length;
 }
 
 function calculateWin() {
     A: for(let combination of winningCombinations) {
-        let firstBun = cells[combination[0]];
+        let firstBun = buns[combination[0]];
         for(let cell of combination) {
-            if(isCellFree(cell) || cells[cell] != firstBun) continue A; 
+            if(isCellFree(cell) || buns[cell] != firstBun) continue A; 
         }
         if(firstBun) win(); else lose();
         return;
     }
-    if(cells.every(cell => isCellFilled(cell))) draw();
+    if(buns.every(bun => bun != null)) draw();
 }
 
 function win() {
@@ -159,11 +182,11 @@ function cellClick(cell) {
 }
 
 function isCellFilledWithPlayerBun(cell) {
-    return cells[cell] == true;
+    return buns[cell] == true;
 }
 
 function isCellFilledWithBotBun(cell) {
-    return cells[cell] == false;
+    return buns[cell] == false;
 }
 
 function isCellFilled(cell) {
@@ -171,7 +194,7 @@ function isCellFilled(cell) {
 }
 
 function isCellFree(cell) {
-    return cells[cell] === null;
+    return buns[cell] == null;
 }
 
 function getBunFor(button, searchForPlayerBun) {
@@ -200,3 +223,5 @@ function disableCellSelection() {
         getBunFor(button, true).classList.remove('ghost-bun');
     });
 }
+
+startGame();
