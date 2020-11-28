@@ -108,6 +108,24 @@ function botThink() {
             return;
         }
     }
+    //Пытаемся выбить выигрышную комбинацию
+    let shuffledCombinations = winningCombinations.slice();
+    for (let i = shuffledCombinations.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = shuffledCombinations[i];
+        shuffledCombinations[i] = shuffledCombinations[j];
+        shuffledCombinations[j] = temp;
+    }
+    console.log(shuffledCombinations);
+    for(let combination of shuffledCombinations) {
+        if(getBotBunCountAt(combination) == 1 && getPlayerBunCountAt(combination) == 0) {
+            let emptyCells = combination.slice().filter(isCellFree);
+            let chosenCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            console.log('Trying to win');
+            placeBun(chosenCell);
+            return;
+        }
+    }
     //Если ничего выше не выполнилось - ставим булочку в любую свободную ячейку
     let emptyCells = new Array(9);
     buns.forEach((cell, i) => {
