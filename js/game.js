@@ -91,7 +91,7 @@ function placeBun(cell) {
 function botThink() {
     //В первую очередь ищем возможные выигрышные варианты
     for(let combination of winningCombinations) {
-        if(getBotBunCountAt(combination) == 2) {
+        if(getBotBunCountAt(combination) == 2 && hasEmptyCellsAt(combination)) {
             placeBun(getFirstEmptyCellAt(combination));
         }
     }
@@ -103,6 +103,10 @@ function getBunsAt(combination) {
         buns[i] = cells[cell];
     });
     return buns;
+}
+
+function hasEmptyCellsAt(combination) {
+    return combination.slice().filter(isCellFree).length > 0;
 }
 
 function getFirstEmptyCellAt(combination) {
