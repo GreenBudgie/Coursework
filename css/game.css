@@ -417,6 +417,32 @@ nav #cart {
   height: 100%;
 }
 
+@-webkit-keyframes popup {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(80%);
+            transform: scale(80%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(80%);
+            transform: scale(80%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
 #game-wrapper #game-field {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -427,6 +453,8 @@ nav #cart {
           box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
   border-radius: 50px;
   margin: auto 0;
+  -webkit-animation: popup 0.5s ease-in-out;
+          animation: popup 0.5s ease-in-out;
 }
 
 #game-wrapper #game-field table {
@@ -502,6 +530,12 @@ nav #cart {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#game-wrapper #game-info-wrapper * {
+  opacity: 0;
+  -webkit-animation: popup 0.5s ease-in-out 0.2s forwards;
+          animation: popup 0.5s ease-in-out 0.2s forwards;
 }
 
 #game-wrapper #game-info-wrapper h2 {

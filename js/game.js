@@ -85,7 +85,7 @@ function placeBun(cell) {
             disableCellSelection();
             setTimeout(() => {
                 botThink();
-            }, Math.ceil(Math.random() * 700) + 200);
+            }, Math.ceil(Math.random() * 750) + 250);
         }
     }
 }
@@ -94,16 +94,13 @@ function botThink() {
     //В первую очередь ищем возможные выигрышные варианты
     for(let combination of winningCombinations) {
         if(getBotBunCountAt(combination) == 2 && hasEmptyCellsAt(combination)) {
-            console.log('Winning');
             placeBun(getFirstEmptyCellAt(combination));
             return;
         }
     }
     //Предотвращаем выигрышные комбинации игрока
     for(let combination of winningCombinations) {
-        console.log(`Combination: ${combination}, player buns: ${getPlayerBunCountAt(combination)}, empty cells: ${hasEmptyCellsAt(combination)}`);
         if(getPlayerBunCountAt(combination) == 2 && hasEmptyCellsAt(combination)) {
-            console.log('Preventing');
             placeBun(getFirstEmptyCellAt(combination));
             return;
         }
@@ -116,12 +113,10 @@ function botThink() {
         shuffledCombinations[i] = shuffledCombinations[j];
         shuffledCombinations[j] = temp;
     }
-    console.log(shuffledCombinations);
     for(let combination of shuffledCombinations) {
         if(getBotBunCountAt(combination) == 1 && getPlayerBunCountAt(combination) == 0) {
             let emptyCells = combination.slice().filter(isCellFree);
             let chosenCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-            console.log('Trying to win');
             placeBun(chosenCell);
             return;
         }
@@ -134,7 +129,6 @@ function botThink() {
         }
     });
     let cleanEmptyCells = emptyCells.filter(cell => cell != null && cell != undefined);
-    console.log('Random');
     placeBun(cleanEmptyCells[Math.floor(Math.random() * cleanEmptyCells.length)]);
 }
 
@@ -241,5 +235,3 @@ function disableCellSelection() {
         getBunFor(button, true).classList.remove('ghost-bun');
     });
 }
-
-startGame();
