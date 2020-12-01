@@ -265,6 +265,10 @@
         }
     }
 
+    .right-wrapper {
+        padding-left: 35px;
+    }
+
     #game-info-wrapper {
         padding-left: 35px;
         display: flex;
@@ -313,6 +317,7 @@
         }
 
     }
+
 }
 
 @include footer;
