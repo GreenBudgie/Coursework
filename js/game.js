@@ -185,6 +185,50 @@ function win(combination) {
     let prize = randomChoose([['FREE', 'Доставка'], ['5%', 'Скидка'], ['10%', 'Скидка']]);
     topText.innerHTML = prize[0];
     bottomText.innerHTML = prize[1];
+    document.querySelector('#win-wrapper input').value = randomChoose(['вкусно-кушать-222', 'so-tasty-333', 'я-победил-111']);
+}
+
+//Copying text
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+  
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+  
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+      console.error('Fallback: Oops, unable to copy', err);
+    }
+  
+    document.body.removeChild(textArea);
+  }
+
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+      console.error('Async: Could not copy text: ', err);
+    });
+}
+
+function copyPromo() {
+    copyTextToClipboard(document.querySelector('#win-wrapper input').value);
+    document.getElementById('copied-info').classList.remove('inactive');
 }
 
 function randomChoose(array) {
@@ -253,5 +297,3 @@ function disableCellSelection() {
         getBunFor(button, true).classList.remove('ghost-bun');
     });
 }
-
-//startGame();
