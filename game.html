@@ -106,12 +106,12 @@
                     </tr>
                 </table>
             </div>
-            <div id="game-info-wrapper" class="game-right-wrapper">
+            <div id="game-info-wrapper" class="game-right-wrapper inactive">
                 <h2>Бублики&#8209;Крендельки</h2>
                 <h3>Правила игры:</h3>
                 <p>Вы играете за выбранную ранее булочку. Сделайте первый ход - поставьте ее в ячейку. Собрали 3 булочки в ряд, в колонку или по диагонали? Поздравляем, Вы победили! Но не все так просто - наш булочный бот также хочет выиграть!</p>
                 <h3>Возможный выигрыш:</h3>
-                <div id="prizes">
+                <div class="prizes">
                     <span>
                         <h3>10%</h3>
                         <p>Скидка</p>
@@ -126,21 +126,21 @@
                     </span>
                 </div>
             </div>
-            <div id="game-win-wrapper" class="game-right-wrapper">
+            <div id="win-wrapper" class="game-right-wrapper">
                 <h2>Поздравляем!</h2>
                 <p>Вы победили нашего булочного бота и мы предоставляем Вам подарок:</p>
-                <div id="prize">
+                <div class="prizes">
                     <span>
                         <h3>h3</h3>
                         <p>p</p>
                     </span>
                 </div>
                 <h3>Ваш промокод:</h3>
-                <div>
+                <div id="promo">
                     <input type="text">
-                    <span><img src="img/game/copy-icon.svg" alt="Copy"></span>
+                    <button><img src="img/game/copy-icon.svg" alt="Copy"></button>
+                    <img src="img/game/copied-info.svg" alt="Copied" id="copied-info"> 
                 </div>
-                <img src="img/game/copied-info.svg" alt="Copied" id="copied-info"> 
             </div>
         </div>
     </div>

@@ -519,7 +519,7 @@ nav #cart {
   border-left: 0 none;
 }
 
-#game-wrapper #game-info-wrapper {
+#game-wrapper .game-right-wrapper {
   padding-left: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,49 +532,116 @@ nav #cart {
       justify-content: space-around;
 }
 
-#game-wrapper #game-info-wrapper * {
+#game-wrapper .game-right-wrapper * {
   opacity: 0;
   -webkit-animation: popup 0.5s ease-in-out 0.2s forwards;
           animation: popup 0.5s ease-in-out 0.2s forwards;
 }
 
-#game-wrapper #game-info-wrapper h2 {
+#game-wrapper .game-right-wrapper h2 {
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 64px;
 }
 
-#game-wrapper #game-info-wrapper h3 {
+#game-wrapper .game-right-wrapper h3 {
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 48px;
   color: #E59656;
 }
 
-#game-wrapper #game-info-wrapper > p {
+#game-wrapper .game-right-wrapper > p {
   font-family: 'Open Sans';
   font-size: 24px;
   line-height: 33px;
 }
 
-#game-wrapper #game-info-wrapper #prizes {
+#game-wrapper .game-right-wrapper .prizes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
 }
 
-#game-wrapper #game-info-wrapper #prizes h3 {
+#game-wrapper .game-right-wrapper .prizes h3 {
   font-size: 64px;
 }
 
-#game-wrapper #game-info-wrapper #prizes p {
+#game-wrapper .game-right-wrapper .prizes p {
   font-family: 'Diamond Girl';
   font-weight: lighter;
   font-size: 36px;
+}
+
+#game-wrapper #win-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#game-wrapper #win-wrapper h2 {
+  text-align: center;
+}
+
+#game-wrapper #win-wrapper > h3 {
+  color: black;
+}
+
+#game-wrapper #win-wrapper .prizes span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 170px;
+  height: 170px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+          box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+  border-radius: 50px;
+}
+
+#game-wrapper #win-wrapper #promo {
+  position: relative;
+}
+
+#game-wrapper #win-wrapper #promo input {
+  width: 100%;
+  height: 78px;
+  border: none;
+  background: #FFFFFF;
+  -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+          box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+  border-radius: 30px;
+}
+
+#game-wrapper #win-wrapper #promo button {
+  position: absolute;
+  right: 0;
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #E59656;
+  height: 78px;
+  width: 107px;
+}
+
+#game-wrapper #win-wrapper #promo button img {
+  width: auto;
+  height: auto;
+}
+
+#game-wrapper #win-wrapper #promo > img {
+  position: absolute;
+  width: 118px;
+  right: 50px;
 }
 
 footer {

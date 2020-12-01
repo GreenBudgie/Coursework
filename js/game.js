@@ -235,3 +235,5 @@ function disableCellSelection() {
         getBunFor(button, true).classList.remove('ghost-bun');
     });
 }
+
+startGame();
