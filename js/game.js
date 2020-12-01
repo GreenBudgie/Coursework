@@ -166,29 +166,47 @@ function calculateWin() {
         for(let cell of combination) {
             if(isCellFree(cell) || buns[cell] != firstBun) continue A; 
         }
-        if(firstBun) win(); else lose();
+        if(firstBun) win(combination); else lose(combination);
         return;
     }
     if(buns.every(bun => bun != null)) draw();
 }
 
-function win() {
+function win(combination) {
     gameFinished = true;
-    alert('WIN');
+    disableCellSelection();
+    for(let i of combination) {
+        buttons[i].classList.add('win-cell');
+    }
+    document.getElementById('game-info-wrapper').classList.add('inactive');
+    document.getElementById('win-wrapper').classList.remove('inactive');
+    let topText = document.querySelector('#win-wrapper .prizes h3');
+    let bottomText = document.querySelector('#win-wrapper .prizes p');
+    let prize = randomChoose([['FREE', 'Доставка'], ['5%', 'Скидка'], ['10%', 'Скидка']]);
+    topText.innerHTML = prize[0];
+    bottomText.innerHTML = prize[1];
 }
 
-function lose() {
+function randomChoose(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+function lose(combination) {
     gameFinished = true;
-    alert('LOSE');
+    disableCellSelection();
+    for(let i of combination) {
+        buttons[i].classList.add('lose-cell');
+    }
 }
 
 function draw() {
     gameFinished = true;
+    disableCellSelection();
     alert('DRAW');
 }
 
 function cellClick(cell) {
-    if(playerTurn && isCellFree(cell)) {
+    if(!gameFinished && playerTurn && isCellFree(cell)) {
         placeBun(cell);
     }
 }
@@ -236,4 +254,4 @@ function disableCellSelection() {
     });
 }
 
-startGame();
+//startGame();
