@@ -404,6 +404,37 @@
         }
     }
 
+    #lose-wrapper {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+
+            span {
+                display: flex;
+                justify-content: space-around;
+                width: 70px;
+                height: 100%;
+                background: #FFFFFF;
+                border: 1px solid rgba(229, 150, 86, 0.32);
+                border-radius: 20px;
+                font-family: 'Diamond Girl';
+                font-weight: lighter;
+                font-size: 96px;
+            }
+
+            img {
+                height: 50px;
+            }
+
+        }
+    }
+
 }
 
 @include footer;

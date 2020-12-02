@@ -241,12 +241,47 @@ function lose(combination) {
     for(let i of combination) {
         buttons[i].classList.add('lose-cell');
     }
+    showLoseWrapper(false);
+    startCountdown(60* 60 * 4);
 }
 
 function draw() {
     gameFinished = true;
     disableCellSelection();
-    alert('DRAW');
+    showLoseWrapper(true);
+    startCountdown(60 * 30);
+}
+
+function showLoseWrapper(isDraw) {
+    document.getElementById('game-info-wrapper').classList.add('inactive');
+    document.getElementById('lose-wrapper').classList.remove('inactive');
+    document.getElementById(isDraw ? 'lose-text' : 'draw-text').classList.add('inactive');
+}
+
+let currentSeconds = 0;
+
+function startCountdown(seconds) {
+    currentSeconds = seconds;
+    setTimeInfo(currentSeconds);
+    setInterval(() => {
+        if(currentSeconds > 0) currentSeconds--;
+        setTimeInfo(currentSeconds);
+    }, 1000);
+}
+
+function setTimeInfo(seconds) {
+    if(seconds < 0) seconds = 0;
+    let sec = seconds % 60;
+    let min = Math.floor(seconds / 60.0) % 60;
+    let hour = Math.floor(seconds / 3600.0);
+    console.log(sec, min, hour);
+    let convert = n => n.toString().length == 1 ? '0' + n.toString() : n.toString();
+    document.getElementById('time-hour-2').innerHTML = convert(hour)[0];
+    document.getElementById('time-hour-1').innerHTML = convert(hour)[1];
+    document.getElementById('time-min-2').innerHTML = convert(min)[0];
+    document.getElementById('time-min-1').innerHTML = convert(min)[1];
+    document.getElementById('time-sec-2').innerHTML = convert(sec)[0];
+    document.getElementById('time-sec-1').innerHTML = convert(sec)[1];
 }
 
 function cellClick(cell) {
