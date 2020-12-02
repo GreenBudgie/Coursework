@@ -645,6 +645,7 @@ nav #cart {
   background-color: #E59656;
   height: 78px;
   width: 107px;
+  cursor: pointer;
 }
 
 #game-wrapper #win-wrapper #promo button img {

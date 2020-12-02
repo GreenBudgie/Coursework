@@ -70,8 +70,8 @@
 
 .inactive, .inactive * {
     display: none !important;
-    top: 0 !important;;
-    position: absolute !important;;
+    top: 0 !important;
+    position: absolute !important;
 }
 
 #card-wrapper {
@@ -364,7 +364,6 @@
             }
             
             button {
-
                 position: absolute;
                 right: 0;
                 border: none;
@@ -373,7 +372,7 @@
                 background-color: $secondary-color;
                 height: 78px;
                 width: 107px;
-                
+                cursor: pointer;
 
                 img {
                     width: auto;
