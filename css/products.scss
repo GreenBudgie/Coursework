@@ -10,6 +10,27 @@ header {
 
     @include navigation-bar(true);
     @include page-path;
+
+    > h2 {
+        margin: 60px auto 30px auto;
+        width: $grid-width;
+        color: $primary-color;
+        font-family: 'Diamond Girl';
+        font-weight: lighter;
+        font-size: 64px;
+    }
+
+    > p {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 300px;
+        width: $grid-width;
+        color: $primary-color;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 49px;
+    }
 }
 
 @include footer;

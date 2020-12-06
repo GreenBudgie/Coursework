@@ -120,6 +120,27 @@ header #page-path span {
   color: #E59656;
 }
 
+header > h2 {
+  margin: 60px auto 30px auto;
+  width: 1170px;
+  color: white;
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 64px;
+}
+
+header > p {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 300px;
+  width: 1170px;
+  color: white;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 49px;
+}
+
 footer {
   background-color: black;
   height: 179px;
