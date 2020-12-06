@@ -1,0 +1,15 @@
+@import 'presets';
+
+@include logo(true);
+
+header {
+    width: 100%;
+    height: 648px;
+    background-position: center;
+    background-image: url("../img/products/header-back.png");
+
+    @include navigation-bar(true);
+    @include page-path;
+}
+
+@include footer;
