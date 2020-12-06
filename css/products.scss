@@ -33,4 +33,134 @@ header {
     }
 }
 
+#product-list {
+    margin: 70px auto 0 auto;
+    width: 967px;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: url('../img/index/header/splitter-ellipse.svg');
+        font-family: 'Diamond Girl';
+        font-weight: lighter;
+        font-size: 48px;
+        
+        a { 
+            color: black;
+            text-decoration: none;
+
+            &:hover::after {
+                color: $secondary-color;
+                width: 120%;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: relative;
+                width: 0%;
+                height: 3px;
+                background-color: $secondary-color;
+                transition: width 0.3s ease;
+            }
+        }
+
+        li:first-child {
+            list-style: none;
+        
+            a::after {
+                width: 120%;
+            }
+        }
+
+        li {
+            margin: 0 34px;
+        }
+    }
+}
+
+#products-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 70px auto 100px auto;
+    width: $grid-width;
+    height: 662px;
+
+    .product {
+        position: relative;
+        width: 370px;
+        height: 316px;
+        cursor: pointer;
+
+        @mixin fill-component {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        &:hover::after {
+            opacity: 0.5;
+        }
+
+        &::after {
+            content: '';
+            @include fill-component;
+            opacity: 0;
+            background-color: black;
+            transition: opacity 0.3s;
+        }
+
+        div {
+            @include fill-component;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+
+            img {
+                left: 50%;
+                top: 50%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                transform: translate(-50%, -50%) scale(0.6);
+                transition: transform 0.5s;
+            }
+
+            span {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                padding: 0 20px 20px 20px;
+                bottom: 0;
+                left: 0;
+
+                p {
+                    color: $primary-color;
+                    font-family: 'Open Sans';
+                    font-weight: 300;
+                    font-size: 24px;
+                }
+
+                .price {
+                    font-weight: 600;
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+
+                img {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+
+    }
+
+}
+
 @include footer;
