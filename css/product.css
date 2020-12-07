@@ -107,7 +107,6 @@ nav #cart {
           transform: translateX(-50%) translateY(-15px);
   max-width: 100%;
   overflow-x: hidden;
-  margin-bottom: 35px;
 }
 
 #page-path {
@@ -121,6 +120,156 @@ nav #cart {
 
 #page-path span {
   color: #E59656;
+}
+
+main {
+  width: 1170px;
+  height: 638px;
+  margin: 70px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main > img {
+  margin-right: 70px;
+}
+
+main > span {
+  margin: auto 0;
+}
+
+main > span h2 {
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 48px;
+}
+
+main > span #price {
+  margin-top: 40px;
+  font-family: 'Diamond Girl';
+  font-weight: lighter;
+  font-size: 48px;
+  color: #E59656;
+}
+
+main > span #price span {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 24px;
+  color: black;
+}
+
+main > span .mark-info {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main > span .mark-info img {
+  margin-right: 6px;
+}
+
+main > span .mark-info p {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  line-height: 25px;
+}
+
+main > span #cart-count-wrapper {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main > span #cart-count-wrapper > p {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  cursor: pointer;
+}
+
+main > span #cart-count-wrapper > p:hover::after {
+  color: #E59656;
+  width: 120%;
+}
+
+main > span #cart-count-wrapper > p::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0%;
+  height: 3px;
+  background-color: #E59656;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+main > span #cart-count-wrapper #count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 138px;
+  height: 83px;
+  background: white;
+  -webkit-box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+          box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+  border-radius: 25px;
+  font-family: 'Open Sans';
+  font-size: 24px;
+}
+
+main > span #cart-count-wrapper #count button {
+  font-family: 'Open Sans';
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+main > span #cart-count-wrapper #count button:last-child {
+  color: #E59656;
+}
+
+main > span h3 {
+  margin-top: 50px;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  color: #E59656;
+}
+
+main > span #ingredients {
+  margin-top: 15px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 footer {

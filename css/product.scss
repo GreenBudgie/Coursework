@@ -9,11 +9,135 @@
     transform: translateX(-50%) translateY(-15px);
     max-width: 100%;
     overflow-x: hidden;
-    margin-bottom: 35px;
 }
 
 @include page-path;
 
+main {
+    width: $grid-width;
+    height: 638px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
 
+    > img {
+        margin-right: 70px;
+    }
+    
+    > span {
+        margin: auto 0;
+
+        h2 {
+            font-family: 'Diamond Girl';
+            font-weight: lighter;
+            font-size: 48px;
+        }
+
+        #price {
+            margin-top: 40px;
+            font-family: 'Diamond Girl';
+            font-weight: lighter;
+            font-size: 48px;
+            color: $secondary-color;
+
+            span {
+                font-family: 'Open Sans';
+                font-weight: 300;
+                font-size: 24px;
+                color: black;
+            }
+        }
+
+        .mark-info {
+            margin-top: 30px;
+            display: flex;
+            width: fit-content;
+            justify-content: space-between;
+
+            img {
+                margin-right: 6px;
+            }
+
+            p {
+                font-family: 'Open Sans';
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+
+        #cart-count-wrapper {
+            margin-top: 50px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            width: 75%;
+            justify-content: space-between;
+
+            > p {
+                font-family: 'Open Sans';
+                font-size: 24px;
+                cursor: pointer;
+    
+                &:hover::after {
+                    color: $secondary-color;
+                    width: 120%;
+                }
+    
+                &::after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    width: 0%;
+                    height: 3px;
+                    background-color: $secondary-color;
+                    transition: width 0.3s ease;
+                }
+            }
+
+            #count {
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                align-items: center;
+                width: 138px;
+                height: 83px;
+                background: white;
+                box-shadow: 10px -10px 20px rgba(229, 150, 86, 0.05), -10px 10px 20px rgba(229, 150, 86, 0.1);
+                border-radius: 25px;
+                font-family: 'Open Sans';
+                font-size: 24px;
+
+                button {
+                    font-family: 'Open Sans';
+                    font-size: 24px;
+                    width: 40px;
+                    height: 40px;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+
+                    &:last-child {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            margin-top: 50px;
+            font-family: 'Open Sans';
+            font-size: 24px;
+            color: $secondary-color;
+        }
+
+        #ingredients {
+            margin-top: 15px;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}
 
 @include footer;
