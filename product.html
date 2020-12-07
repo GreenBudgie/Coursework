@@ -48,9 +48,9 @@
             </div>
             <div id="cart-count-wrapper">
                 <div id="count">
-                    <button id="count-dec">-</button>
+                    <button onclick="changeCounter(-1)">-</button>
                     <p>1</p>
-                    <button id="count-inc">+</button>
+                    <button onclick="changeCounter(1)">+</button>
                 </div>
                 <p>Добавить в корзину</p>
             </div>
@@ -86,5 +86,14 @@
         </div>
     </footer>
     <!--Repeatable footer-->
+    <script>
+        let counter = document.querySelector('#count p');
+
+        function changeCounter(amount) {
+            let count = Number(counter.innerHTML);
+            let newCount = count + amount;
+            if(newCount > 0 && newCount <= 10) counter.innerHTML = newCount;
+        }
+    </script>
 </body>
 </html>
