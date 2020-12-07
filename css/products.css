@@ -209,6 +209,7 @@ header > p {
   position: relative;
   width: 370px;
   height: 316px;
+  margin-bottom: 30px;
   cursor: pointer;
 }
 

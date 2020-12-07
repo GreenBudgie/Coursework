@@ -1,0 +1,19 @@
+@import 'presets';
+
+@include logo;
+@include navigation-bar;
+
+#underline {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(-15px);
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 35px;
+}
+
+@include page-path;
+
+
+
+@include footer;
