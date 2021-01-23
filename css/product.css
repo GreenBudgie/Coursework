@@ -251,6 +251,7 @@ main > span #cart-count-wrapper #count button {
   border: none;
   background: none;
   cursor: pointer;
+  outline: none;
 }
 
 main > span #cart-count-wrapper #count button:last-child {

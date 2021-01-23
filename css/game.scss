@@ -110,7 +110,7 @@
         }
         to {
             opacity: 0;
-            transform: scale(110%);
+            transform: scale(1.1);
         }
     }
 
@@ -120,7 +120,7 @@
         }
         to {
             opacity: 0;
-            transform: scale(90%);
+            transform: scale(0.9);
         }
     }
 
@@ -157,6 +157,7 @@
         cursor: pointer;
         transition: box-shadow 0.3s, transform 0.3s;
         border-radius: 50px;
+        outline: none;
 
         div {
             display: flex;
@@ -192,11 +193,11 @@
     @keyframes popup {
         from {
             opacity: 0;
-            transform: scale(80%);
+            transform: scale(0.8);
         }
         to {
             opacity: 1;
-            transform: scale(100%);
+            transform: scale(1);
         }
     }
 
@@ -232,11 +233,12 @@
                 border: none;
                 background-color: white;
                 transition: background-color 0.6s;
+                outline: none;
 
                 &:hover {
                     .ghost-bun {
                         opacity: 0.4;
-                        transform: translate(-50%, -50%) scale(95%);
+                        transform: translate(-50%, -50%) scale(0.95);
                     }
                 }
 
@@ -245,14 +247,14 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%) scale(85%);
+                    transform: translate(-50%, -50%) scale(0.85);
                     transition: opacity 0.15s ease-out, transform 0.3s ease-out;
                 }
 
                 .placed {
                     transition: opacity 0.15s ease-out, transform 0.4s cubic-bezier(0.5,-5,0.5,5);
                     opacity: 1;
-                    transform: translate(-50%, -50%) scale(100%);
+                    transform: translate(-50%, -50%) scale(1);
                 }
             }
 

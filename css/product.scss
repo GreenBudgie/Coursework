@@ -115,6 +115,7 @@ main {
                     border: none;
                     background: none;
                     cursor: pointer;
+                    outline: none;
 
                     &:last-child {
                         color: $secondary-color;
